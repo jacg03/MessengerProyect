@@ -6,17 +6,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HistoryComponent } from './history/history.component';
 import { InboxComponent } from './inbox/inbox.component';
 import { DetailComponent } from './detail/detail.component';
+import { ContainerComponent } from './container/container.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     HistoryComponent,
     InboxComponent,
-    DetailComponent
+    DetailComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
