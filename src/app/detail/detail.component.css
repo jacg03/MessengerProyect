@@ -1,0 +1,21 @@
+.media .fotoperfil {
+        max-height:50px!important;
+    }
+    h5 {
+        font-size: 16px; font-weight: bold;
+    }
+    .textgray {
+        font-size: 13px; color: gray;
+    }
+    p {
+        font-size: 1em; color: black; font-weight: bold;
+    }
+    i {
+        color: blue;
+        padding-top: 3.5px;
+    }
+
+    img {
+        margin-left:10px; height: 50px;
+        width: 50px;
+    }

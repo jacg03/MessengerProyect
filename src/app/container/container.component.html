@@ -18,8 +18,10 @@
   <!-- Contenedor solo detalle de chat -->
   <div class="col-md-4 bodycontainer" style="background-color: rgb(232, 139, 250);">
     <div class="row">
-      <app-detail></app-detail>
+      <app-detail class="col-md-12"></app-detail>
     </div>
   </div>
+  <button (click)="mostrartexto()" class="btn btn-info">Voy a cambiar el texto </button>
+  <p>{{Texto}}</p>
 
 </div>

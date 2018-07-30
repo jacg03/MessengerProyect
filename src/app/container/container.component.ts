@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent implements OnInit {
-
+  Texto: String = 'este es mi mensaje';
   constructor() { }
 
   ngOnInit() {
+  }
+  mostrartexto() {
+    return this.Texto = 'este es el nuevo texto';
   }
 
 }
