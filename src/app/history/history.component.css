@@ -1,0 +1,95 @@
+.row{
+    /*border-style: solid;*/ 
+}
+
+.columna1{
+    padding-right: 10px;
+    padding-left: 10px; 
+    
+}
+
+.imgIcon{
+    width: 30px;
+    height: 30px;
+}
+
+.navigation{
+    flex-wrap: initial;
+}
+
+.nav-item{
+    margin-left: 30%;
+}
+
+.fila1{
+    display:flex;
+}
+
+.PE1{
+    text-align: left;
+}
+
+.PE2{
+    text-align: center;
+}
+
+.PE3{
+    text-align: right;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.messFont{
+    flex-basis: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 7px 0 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.chatWindow{
+    margin-top: 10px;
+    display: flex;
+}
+
+.colWindow{
+    display:flex;
+}
+
+.imgChat{
+    height: 50px;
+}
+
+.pNombre{
+    overflow: hidden;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contenedorChats{
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    height:530px;
+}
+
+.fa-cog{
+    font-size: 30px;
+}
+
+.fa-comment{
+    font-size: 30px;
+}
