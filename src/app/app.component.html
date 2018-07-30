@@ -1,10 +1,10 @@
 <!-- Este es el contenedor general -->
-<div class="container-fluid" style="height: 100vh;">
+<div class="container-fluid">
 
   <div class="row">
 
     <!-- Contenedor para el historial de mensajes -->
-    <div class="col-md-3" style="background-color:aqua;">
+    <div class="col-md-3" style="background-color:aqua; height: 100vh;">
       <app-history></app-history>
     </div>
 
@@ -12,21 +12,21 @@
     <div class="col-md-9">
 
       <div class="row">
-        
+
         <!-- Contenedor para el titulo -->
-        <div class="col-md-12" style="height: 10%;">
+        <div class="col-md-12" style="height: 10vh;">
           <div class="row">
             <label class="col-md-12">Soy el titulo</label>
           </div>
         </div>
 
         <!-- Contenedor solo chat -->
-        <div class="col-md-8 container-fluid" style="height: 90%;">
+        <div class="col-md-8 container-fluid" style="height: 90vh;">
           <app-inbox></app-inbox>
         </div>
 
         <!-- Contenedor solo detalle de chat -->
-        <div class="col-md-4 container-fluid" style="background-color: rgb(232, 139, 250); height: 90%;">
+        <div class="col-md-4 container-fluid" style="background-color: rgb(232, 139, 250); height: 90vh;">
           <app-detail></app-detail>
         </div>
       </div>
