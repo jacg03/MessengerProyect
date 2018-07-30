@@ -83,13 +83,16 @@ hr {
 .contenedorChats{
     overflow-y: scroll; 
     overflow-x: hidden; 
-    height:530px;
+    height:582px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -ms-overflow-style: none;
 }
 
 .fa-cog{
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .fa-comment{
-    font-size: 30px;
+    font-size: 24px;
 }
