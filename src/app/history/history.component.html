@@ -6,13 +6,21 @@
       <div class="fila1 col-12" style="padding-top: 20px;">
 
         <!--NAV-->
-        <div class="col-2">
-          <p class="PE1">
-            <i class="fa fa-cog iconosss"></i>
+        <div class="col-2" ngbDropdown>
+          <!-- <p class="PE1"> -->
+            <span ngbDropdownToggle><i class="fa fa-cog"></i></span>
             <!--NAV<img src="https://cdn3.iconfinder.com/data/icons/messenger-flat/128/16_Setting-512.png" class="imgIcon" alt="Cinque Terre">-->
-          </p>
+          <!-- </p> -->
+            <div ngbDropdownMenu>
+              <span class="dropdown-item">Settings</span>
+              <span class="dropdown-item" appStatusChanged [statusActive]="false">Offline</span>
+              <span class="dropdown-item" appStatusChanged [statusActive]="true">Online</span>
+            </div>
         </div>
-        <div class="col-8">
+        <div class="col-1">
+          <div id="badge" class="rounded-circle" style="height: 10px; width: 10px; margin-left: -25px; margin-top: 25px; background-color: gray;"></div>
+        </div>
+        <div class="col-7">
           <h1 class="messFont">Messenger</h1>
         </div>
         <div class="col-2">
@@ -302,9 +310,5 @@
       </div>
       <!--Termina row contenedor de los chatPreview-->
     </div>
-
-
-
-
   </div>
 </div>

@@ -8,6 +8,7 @@ import { InboxComponent } from './inbox/inbox.component';
 import { DetailComponent } from './detail/detail.component';
 import { ContainerComponent } from './container/container.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { StatusChangedDirective } from './directives/status-changed.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     HistoryComponent,
     InboxComponent,
     DetailComponent,
-    ContainerComponent
+    ContainerComponent,
+    StatusChangedDirective
   ],
   imports: [
     BrowserModule,
