@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatsService } from '../services/chats.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-history',
@@ -10,7 +11,7 @@ export class HistoryComponent implements OnInit {
   chats:any = [];
   service = new ChatsService();
 
-  constructor() { }
+  constructor( private route:Router) { }
 
   ngOnInit() {
     this.chats = this.service.getChats(); 
@@ -18,6 +19,10 @@ export class HistoryComponent implements OnInit {
 
   buscarChat(texto:string) {
     this.chats = this.service.getChatsByName(texto);
+  }
+
+  reloadInbox(id) {
+    this.route.navigate( ['/inbox',id] );
   }
 
 }

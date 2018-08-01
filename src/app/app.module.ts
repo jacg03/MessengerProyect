@@ -9,6 +9,7 @@ import { DetailComponent } from './detail/detail.component';
 import { ContainerComponent } from './container/container.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { StatusChangedDirective } from './directives/status-changed.directive';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StatusChangedDirective } from './directives/status-changed.directive';
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule, 
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

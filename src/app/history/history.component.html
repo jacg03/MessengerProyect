@@ -47,7 +47,7 @@
     <div class="contenedorChats row">
       <div class="col-12">
 
-        <div class="chatWindow row" *ngFor="let chat of chats">
+        <div class="chatWindow row" *ngFor="let chat of chats" (click)="reloadInbox(chat.id)">
 
           <div class="colWindow col-12">
               <img src="{{ chat.image }}" class="rounded-circle imgChat col-3 " alt="Cinque Terre">

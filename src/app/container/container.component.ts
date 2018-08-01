@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ChatsService } from '../services/chats.service';
 
 @Component({
   selector: 'app-container',
@@ -7,10 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
   Texto: String = 'este es mi mensaje';
-  constructor() { }
+  nombre:string;
+  id:number;
+  service = new ChatsService();
+
+  constructor(private router:ActivatedRoute) {
+    // if(router.snapshot.paramMap.get('id') != null)
+    // {
+    //   this.id = Number(router.snapshot.paramMap.get('id'));
+    //   let result = this.service.getChatById(this.id);
+    //   this.nombre = result.name;
+    // }
+   }
 
   ngOnInit() {
+    this.router.params.subscribe( params => {
+      let result = this.service.getChatById(params['id']);
+      this.nombre = result.name;
+    });
   }
+
   mostrartexto() {
     return this.Texto = 'este es el nuevo texto';
   }
