@@ -12,6 +12,7 @@ export class ContainerComponent implements OnInit {
   nombre:string;
   id:number;
   service = new ChatsService();
+  toggle:boolean = true;
 
   constructor(private router:ActivatedRoute) {
     // if(router.snapshot.paramMap.get('id') != null)
@@ -39,4 +40,7 @@ export class ContainerComponent implements OnInit {
     return this.Texto = 'este es el nuevo texto';
   }
 
+  toggleDetail() {
+    this.toggle = !this.toggle;
+  }
 }

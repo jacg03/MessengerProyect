@@ -18,3 +18,19 @@
   font-weight: normal;
   margin-top: -10px;
 }
+
+.fa {
+  font-size: 28px;
+  color:  rgb(32, 82, 248);
+}
+
+.icon :hover {
+  font-size: 31px;
+  margin-left: -1px;
+  margin-top: -3px;
+  cursor: pointer;
+}
+
+.bye {
+  display: none;
+}

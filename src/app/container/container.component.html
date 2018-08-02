@@ -2,23 +2,24 @@
 
   <!-- Contenedor para el titulo -->
   <div class="col-md-12 titlecontainer" style="border-bottom: 1px solid rgba(0, 0, 0, .10);">
-    <div class="row text-center">
-      <label class="col-12 text-center title pt-2"><b>{{ nombre }}</b></label>
+    <div class="row">
+      <label class="offset-2 col-8 text-center title pt-2"><b>{{ nombre }}</b></label>
+      <span class="text-right pt-3 icon"><i class="fa fa-info-circle" (click)="toggleDetail()"></i></span>
       <label class="col-12 text-center subtitle">Activo(a) en Messenger</label>
     </div>
   </div>
 
   <!-- Contenedor solo chat -->
-  <div class="col-md-8 bodycontainer">
+  <div class="col-md-8 bodycontainer" [ngClass]="{'col-md-12' : toggle}">
     <div class="row">
       <app-inbox class="col-md-12"></app-inbox>
     </div>
   </div>
 
   <!-- Contenedor solo detalle de chat -->
-  <div class="col-md-4 bodycontainer" style="border-left: 1px solid rgba(0, 0, 0, .10);">
+  <div class="col-md-4 bodycontainer" [ngClass]="{'bye': toggle }" style="border-left: 1px solid rgba(0, 0, 0, .10);">
     <div class="row">
-      <app-detail class="col-md-12"></app-detail>
+      <app-detail class="col-md-12" ></app-detail>
     </div>
   </div>
 
