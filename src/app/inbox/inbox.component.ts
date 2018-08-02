@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ChatsService } from '../services/chats.service';
 
 @Component({
   selector: 'app-inbox',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inbox.component.css']
 })
 export class InboxComponent implements OnInit {
-
-  constructor() { }
+  id:string;
+  constructor(private router:ActivatedRoute, private service:ChatsService) { }
 
   ngOnInit() {
+    this.router.params.subscribe( params => {
+      let result = this.service.getChatById(params['id']);
+      this.id = result.id;
+    });
   }
 
 }

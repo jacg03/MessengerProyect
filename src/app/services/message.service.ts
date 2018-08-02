@@ -20,4 +20,29 @@ export class MessageService {
   ];
 
   constructor() { }
+
+  public getMessagesByChatId(chatId:number) {
+    let result = [];
+    for(let item of this.messages){
+      if(item.chatId = chatId){
+        result.push(item)
+      }
+    }
+    // result = result.sort(function (a, b) {
+    //   return (a.chatId - b.chatId)
+    // });
+
+    return result;
+  }
+
+  public postMessage(text:string, chatId:number) {
+    let obj:any = {
+      id: this.messages.lenght + 1 ,
+      text: text,
+      isIncoming: true,
+      chatId: chatId
+    };
+
+    this.messages.push(obj);
+  }
 }
