@@ -1,78 +1,32 @@
 <div class="row">
     <div class="col-md-12">
         <div class="row scrollingdiv" style="height: 81.5vh; padding-top: 20px;">
-            <div class="col-md-12 text-right">
-                <label class="messagesend text-left">
-                    {{id}}
-                </label>
+            <div *ngFor="let message of messages" [ngClass]="[message.isIncoming ? 'col-md-12 text-right' : 'col-md-12 text-left']">
+                <div *ngIf="message.isIncoming; else NoIncoming">
+                    <label class="messagesend text-left">
+                        {{message.text}}
+                    </label>
+                </div>
+
+                <ng-template #NoIncoming>
+                    <img src="{{image}}" class="rounded-circle imagemessagereceived">
+                    <label class="messagereceived text-left">
+                        {{message.text}}
+                    </label>
+                </ng-template>
+
             </div>
-            <div class="col-md-12 text-left">
-                <img src="http://www.conejos.wiki/Imagenes/imagen-de-un-conejo-enano.jpg" class="rounded-circle imagemessagereceived">
-                <label class="messagereceived text-left">
-                    aaaaaaaaaaa
-                </label>
-            </div>
-            <div class="col-md-12 text-center">
+            <!-- <div class="col-md-12 text-center">
                 <label class="date">
                     <b>10:50 A.M.</b>
                 </label>
-            </div>
-            <div class="col-md-12 text-left">
-                <img src="http://www.conejos.wiki/Imagenes/imagen-de-un-conejo-enano.jpg" class="rounded-circle imagemessagereceived">
-                <label class="messagereceived text-left">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
-                    from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
-                    in Virginia
-                </label>
-            </div>
-            <div class="col-md-12 text-center">
-                <label class="date">
-                    <b>12:40 A.M.</b>
-                </label>
-            </div>
-            <div class="col-md-12 text-right">
-                <label class="messagesend text-left">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
-                    from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College 
-                    in Virginia s old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
-                </label>
-            </div>
-            <div class="col-md-12 text-right">
-                <label class="messagesend text-left">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                </label>
-            </div>
-            <div class="col-md-12 text-left">
-                <img src="http://www.conejos.wiki/Imagenes/imagen-de-un-conejo-enano.jpg" class="rounded-circle imagemessagereceived">
-                <label class="messagereceived text-left">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica Virginia
-                </label>
-            </div>
-            <div class="col-md-12 text-right">
-                <label class="messagesend text-left">
-                    Contrary to pomaking it over 2000
-                </label>
-            </div>
-            <div class="col-md-12 text-right">
-                <label class="messagesend text-left">
-                    Contrary
-                </label>
-            </div>
-            <div class="col-md-12 text-right">
-                <label class="messagesend text-left">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                </label>
-            </div>
-            <div class="col-md-12 text-left">
-                <img src="http://www.conejos.wiki/Imagenes/imagen-de-un-conejo-enano.jpg" class="rounded-circle imagemessagereceived">
-                <label class="messagereceived text-left">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica Virginia
-                </label>
-            </div>
+            </div> -->
         </div>
+
         <div class="row" style="height: 10%;">
             <div class="col-md-7" style="padding-top: 25px; margin-top: -19px;">
-                <input type="text" style="width: 100%; font-size: 14px; height: 30px;" placeholder="Escibe un mensaje agrega @nombre" (keyup.enter)="postMessage()" [(ngModel)]="texto">
+                <input type="text" style="width: 100%; font-size: 14px; height: 30px;" placeholder="Escibe un mensaje agrega @nombre" (keyup.enter)="postMessage()"
+                    [(ngModel)]="texto">
             </div>
             <div class="col-md-5" style="color: gray; padding-top: 15px;">
                 <span>
@@ -96,4 +50,3 @@
             </div>
         </div>
     </div>
-</div>

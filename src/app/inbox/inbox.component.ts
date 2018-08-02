@@ -11,6 +11,8 @@ import { MessageService } from '../services/message.service';
 export class InboxComponent implements OnInit {
   id:string;
   texto:string;
+  image:string;
+  messages:any = [];
 
   constructor(private router:ActivatedRoute, private service:ChatsService, private serviceMessage:MessageService) { }
 
@@ -19,10 +21,14 @@ export class InboxComponent implements OnInit {
       if(this.service.getChatById(params['id']) != null) {
         let result = this.service.getChatById(params['id']);
         this.id = result.id;
+        this.image = result.image;
       }
       else {
-        this.id = "1";
+        let result = this.service.getChatById(1);
+        this.id = result.id;
+        this.image = result.image;
       }
+      this.messages = this.serviceMessage.getMessagesByChatId(Number(this.id));
     });
   }
 
