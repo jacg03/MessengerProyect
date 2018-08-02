@@ -15,8 +15,8 @@ export class ChatsService {
     },
     {
       id: 2,
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Standaard_Nederlandsche_SS.svg/1200px-Standaard_Nederlandsche_SS.svg.png",
-      name: "Alejandro Ramirez Sanchez",
+      image: "http://socialsciences.exeter.ac.uk/education/staffprofiles/images/karen_mattick.jpg",
+      name: "Alejandra Sanchez",
       message: "Entonces vas a ir o no?",
       date: "13:35"
     }
