@@ -13,8 +13,13 @@ export class InboxComponent implements OnInit {
 
   ngOnInit() {
     this.router.params.subscribe( params => {
-      let result = this.service.getChatById(params['id']);
-      this.id = result.id;
+      if(this.service.getChatById(params['id']) != null) {
+        let result = this.service.getChatById(params['id']);
+        this.id = result.id;
+      }
+      else {
+        this.id = "1";
+      }
     });
   }
 

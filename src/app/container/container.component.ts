@@ -24,8 +24,14 @@ export class ContainerComponent implements OnInit {
 
   ngOnInit() {
     this.router.params.subscribe( params => {
-      let result = this.service.getChatById(params['id']);
-      this.nombre = result.name;
+      if(this.service.getChatById(params['id']) != null) {
+        let result = this.service.getChatById(params['id']);
+        this.nombre = result.name;
+      }
+      else {
+        let result = this.service.getChatById(1);
+        this.nombre = result.name;
+      }
     });
   }
 

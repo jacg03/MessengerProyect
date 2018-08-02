@@ -9,13 +9,21 @@ import { ChatsService } from '../services/chats.service';
 })
 export class DetailComponent implements OnInit {
   nombre:string;
-  
+  image:string;
   constructor(private router:ActivatedRoute, private service:ChatsService) { }
 
   ngOnInit() {
     this.router.params.subscribe( params => {
-      let result = this.service.getChatById(params['id']);
-      this.nombre = result.name;
+      if(this.service.getChatById(params['id']) != null) {
+        let result = this.service.getChatById(params['id']);
+        this.nombre = result.name;
+        this.image = result.image;
+      }
+      else {
+        let result = this.service.getChatById(1);
+        this.nombre = result.name;
+        this.image = result.image;
+      }
     });
   }
 

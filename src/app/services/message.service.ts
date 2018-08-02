@@ -37,7 +37,7 @@ export class MessageService {
 
   public postMessage(text:string, chatId:number) {
     let obj:any = {
-      id: this.messages.lenght + 1 ,
+      id: this.messages.length + 1 ,
       text: text,
       isIncoming: true,
       chatId: chatId
