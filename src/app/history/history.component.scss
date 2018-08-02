@@ -44,8 +44,19 @@
   }
 
   .chatWindow {
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
+  }
+
+  .chatWindow:hover {
+    background-color: rgb(238, 237, 237);
+    cursor: pointer;
+  }
+
+  .chatWindow:active {
+    background-color:  rgb(32, 82, 248);
+    color: white;
   }
 
   .colWindow {
@@ -53,7 +64,8 @@
   }
 
   .imgChat {
-    height: 50px;
+    height: 45px;
+    width: 45px;
   }
 
   .pNombre {
@@ -70,20 +82,26 @@
   .contenedorChats {
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 570px;
-    padding-top: 20px;
+    height: 210%;
+    padding-top: 10px;
     padding-bottom: 20px;
     -ms-overflow-style: none;
   }
 
   .fa-cog {
     font-size: 24px;
-    color: #5b8ec5;
+    color:  rgb(32, 82, 248);
+  }
+  .icon :hover {
+    font-size: 27px;
+    margin-left: -1px;
+    margin-top: -1px;
+    cursor: pointer;
   }
 
   .fa-edit {
     font-size: 24px;
-    color: #5b8ec5;
+    color:  rgb(32, 82, 248);
     padding-top: 1px;
   }
 
