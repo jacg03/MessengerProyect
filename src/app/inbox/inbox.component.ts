@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ChatsService } from '../services/chats.service';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-inbox',
@@ -9,7 +10,9 @@ import { ChatsService } from '../services/chats.service';
 })
 export class InboxComponent implements OnInit {
   id:string;
-  constructor(private router:ActivatedRoute, private service:ChatsService) { }
+  texto:string;
+
+  constructor(private router:ActivatedRoute, private service:ChatsService, private serviceMessage:MessageService) { }
 
   ngOnInit() {
     this.router.params.subscribe( params => {
@@ -23,4 +26,8 @@ export class InboxComponent implements OnInit {
     });
   }
 
+  postMessage(){
+    this.serviceMessage.postMessage(this.texto, Number(this.id));
+    this.texto = "";
+  }
 }

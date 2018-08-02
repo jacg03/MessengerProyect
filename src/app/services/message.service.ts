@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class MessageService {
   private messages:any = [
     {
@@ -44,5 +45,6 @@ export class MessageService {
     };
 
     this.messages.push(obj);
+    console.log(this.messages);
   }
 }

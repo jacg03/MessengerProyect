@@ -10,6 +10,7 @@ import { ContainerComponent } from './container/container.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { StatusChangedDirective } from './directives/status-changed.directive';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     NgbModule.forRoot(),
     AngularFontAwesomeModule, 
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
