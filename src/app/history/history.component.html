@@ -1,45 +1,41 @@
 <div class="row">
-  <div class="columna1 col-12" style="border: .2px solid rgb(199, 199, 199);">
+  <div class="columna1 col-12" style="border: 1px solid rgba(0, 0, 0, .10)">
 
     <!--Header-->
     <div class="row">
-      <div class="fila1 col-12" style="padding-top: 20px;">
+      <div class="fila1 col-12" style="padding-top: 10px; border-bottom: 1px solid rgba(0, 0, 0, .10);">
 
         <!--NAV-->
-        <div class="col-2" ngbDropdown>
+        <div class="col-3" ngbDropdown>
           <!-- <p class="PE1"> -->
-            <span ngbDropdownToggle><i class="fa fa-cog"></i></span>
-            <!--NAV<img src="https://cdn3.iconfinder.com/data/icons/messenger-flat/128/16_Setting-512.png" class="imgIcon" alt="Cinque Terre">-->
-          <!-- </p> -->
-            <div ngbDropdownMenu>
-              <span class="dropdown-item">Settings</span>
-              <span class="dropdown-item" appStatusChanged [statusActive]="false">Offline</span>
-              <span class="dropdown-item" appStatusChanged [statusActive]="true">Online</span>
-            </div>
+          <span ngbDropdownToggle>
+            <i class="fa fa-cog"></i>
+          </span>
+          <div ngbDropdownMenu>
+            <span class="dropdown-item">Settings</span>
+            <span class="dropdown-item" appStatusChanged [statusActive]="false">Offline</span>
+            <span class="dropdown-item" appStatusChanged [statusActive]="true">Online</span>
+          </div>
         </div>
-        <div class="col-1">
-          <div id="badge" class="rounded-circle" style="height: 10px; width: 10px; margin-left: -25px; margin-top: 25px; background-color: gray;"></div>
+        <div class="col-6">
+          <h1 class="messFont">
+            <span id="badge" class="rounded-circle online">
+            </span>Messenger
+          </h1>
         </div>
-        <div class="col-7">
-          <h1 class="messFont">Messenger</h1>
-        </div>
-        <div class="col-2">
-          <p class="PE3">
-              <i class="fa fa-comment"></i>
-             <!--NAV <img src="https://cdn.iconscout.com/public/images/icon/premium/png-512/chatting-new-message-chat-messenger-sms-bubble-3e287c90ef100f07-512x512.png"
-              class="imgIcon" alt="Cinque Terre">-->
+        <div class="col-3">
+          <p class="PE3 float-right">
+            <i class="fa fa-edit"></i>
           </p>
         </div>
         <!--NAV-->
       </div>
     </div>
-
-    <hr>
     <!--Input de busqueda -->
     <div class="row">
       <div class="col-12">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar conversación..." 
-               (keyup.enter)="buscarChat(Texto.value)" (input)="buscarChat(Texto.value)" #Texto>
+        <input class="form-control mr-sm-2 buscarChat" type="search" placeholder="Buscar conversación..." (keyup.enter)="buscarChat(Texto.value)"
+          (input)="buscarChat(Texto.value)" #Texto>
       </div>
     </div>
 
@@ -50,7 +46,7 @@
         <div class="chatWindow row" *ngFor="let chat of chats" (click)="reloadInbox(chat.id)">
 
           <div class="colWindow col-12">
-              <img src="{{ chat.image }}" class="rounded-circle imgChat col-3 " alt="Cinque Terre">
+            <img src="{{ chat.image }}" class="rounded-circle imgChat col-3 " alt="Cinque Terre">
             <div class="pNombre col-7">
 
               <div class="row">

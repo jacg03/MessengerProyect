@@ -10,7 +10,7 @@ export class StatusChangedDirective {
   onclick(e:any) {
     if(this.statusActive)
     {
-      document.getElementById("badge").style.backgroundColor = "green";
+      document.getElementById("badge").style.backgroundColor = "greenyellow";
     }
     else
     {

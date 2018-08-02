@@ -1,0 +1,107 @@
+.row {
+  /*border-style: solid;*/
+}
+
+.columna1 {
+  padding-right: 10px;
+  padding-left: 10px;
+  .imgIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navigation {
+    flex-wrap: initial;
+  }
+
+  .nav-item {
+    margin-left: 30%;
+  }
+
+  .fila1 {
+    display: flex;
+  }
+
+  .PE1 {
+    text-align: left;
+  }
+
+  .PE2 {
+    text-align: center;
+  }
+
+  .PE3 {
+    text-align: right;
+  }
+
+  .messFont {
+    flex-basis: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 7px 0 0;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .chatWindow {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .colWindow {
+    display: flex;
+  }
+
+  .imgChat {
+    height: 50px;
+  }
+
+  .pNombre {
+    overflow: hidden;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contenedorChats {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 570px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -ms-overflow-style: none;
+  }
+
+  .fa-cog {
+    font-size: 24px;
+    color: #5b8ec5;
+  }
+
+  .fa-edit {
+    font-size: 24px;
+    color: #5b8ec5;
+    padding-top: 1px;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .online {
+    height: 10px;
+    width: 10px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-right: 6px;
+  }
+
+  .buscarChat {
+    margin-top: 10px;
+  }
+}
