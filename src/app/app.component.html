@@ -1,22 +1,13 @@
 <!-- Este es el contenedor general -->
 <div class="container-fluid">
-
   <div class="row">
-
     <!-- Contenedor para el historial de mensajes -->
     <div class="col-md-3 historycontainer">
       <app-history></app-history>
     </div>
-
     <!-- Contenedor para el inbox y el detail -->
     <div class="col-md-9">
-      <div class="row">
-        <div class="col-md-12">
-          <router-outlet></router-outlet>
-        </div>
-      </div>
+      <router-outlet></router-outlet>
     </div>
-
   </div>
-
 </div>

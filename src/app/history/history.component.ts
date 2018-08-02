@@ -5,24 +5,23 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
-  styleUrls: ['./history.component.css']
+  styleUrls: ['./history.component.scss']
 })
 export class HistoryComponent implements OnInit {
-  chats:any = [];
+  chats: any = [];
   service = new ChatsService();
 
-  constructor( private route:Router) { }
+  constructor(private route: Router) {}
 
   ngOnInit() {
-    this.chats = this.service.getChats(); 
+    this.chats = this.service.getChats();
   }
 
-  buscarChat(texto:string) {
+  buscarChat(texto: string) {
     this.chats = this.service.getChatsByName(texto);
   }
 
   reloadInbox(id) {
-    this.route.navigate( ['/inbox',id] );
+    this.route.navigate(['/inbox', id]);
   }
-
 }
