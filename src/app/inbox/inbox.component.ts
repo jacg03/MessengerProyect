@@ -35,5 +35,12 @@ export class InboxComponent implements OnInit {
   postMessage(){
     this.serviceMessage.postMessage(this.texto, Number(this.id));
     this.texto = "";
+    this.messages = this.serviceMessage.getMessagesByChatId(Number(this.id));
+    this.scroll();
+  }
+
+  scroll() {
+    var elmnt = document.getElementById("anchor");
+    elmnt.scrollTop = elmnt.scrollHeight;
   }
 }

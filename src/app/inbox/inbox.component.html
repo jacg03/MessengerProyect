@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
-        <div class="row scrollingdiv" style="height: 81.5vh; padding-top: 20px;">
-            <div *ngFor="let message of messages" [ngClass]="[message.isIncoming ? 'col-md-12 text-right' : 'col-md-12 text-left']">
+        <div class="row scrollingdiv" style="height: 81.5vh; padding-top: 20px;" id="anchor">
+            <div *ngFor="let message of messages" id="papa" [ngClass]="[message.isIncoming ? 'col-md-12 text-right' : 'col-md-12 text-left']">
                 <div *ngIf="message.isIncoming; else NoIncoming">
                     <label class="messagesend text-left">
                         {{message.text}}
@@ -20,6 +20,9 @@
                 <label class="date">
                     <b>10:50 A.M.</b>
                 </label>
+            </div> -->
+            <!-- <div class="row">
+                <img src="{{image}}" class="rounded-circle text-right" style="height: 10px; width: 10px; margin-bottom: 40px;">    
             </div> -->
         </div>
 
