@@ -16,7 +16,115 @@ export class MessageService {
       text: "Que tal",
       isIncoming: false,
       chatId: 1
+    },
+    {
+      id: 3, 
+      text: "Que haces",
+      isIncoming: true,
+      chatId: 1
+    },
+    {
+      id: 4, 
+      text: "Hago tarea",
+      isIncoming: false,
+      chatId: 1
+    },
+    {
+      id: 5, 
+      text: "Tienes mucha tarea? Puedes pasar por mi a las 4?",
+      isIncoming: true,
+      chatId: 1
+    },
+    {
+      id: 6, 
+      text: "No te preocupes, si tengo tarea pero igual tengo tiempo de pasar por ti",
+      isIncoming: false,
+      chatId: 1
+    },
+    {
+      id: 7, 
+      text: "Muy bien, gracias. Me ayudarías mucho porque los caminones se tardan mucho para pasar",
+      isIncoming: true,
+      chatId: 1
+    },
+    {
+      id: 8, 
+      text: "Tal vez llegue a las 4 15",
+      isIncoming: false,
+      chatId: 1
+    },
+    {
+      id: 9, 
+      text: "A las 4 15 esta perfecto",
+      isIncoming: true,
+      chatId: 1
+    },
+    {
+      id: 10, 
+      text: "Ahi te veo",
+      isIncoming: false,
+      chatId: 1
+    },
+    {
+      id: 11, 
+      text: "Hola",
+      isIncoming: false,
+      chatId: 2
+    },
+    {
+      id: 12, 
+      text: "Hey",
+      isIncoming: true,
+      chatId: 2
+    },
+    {
+      id: 13, 
+      text: "Estas entu casa?",
+      isIncoming: false,
+      chatId: 2
+    },
+    {
+      id: 14, 
+      text: "Si, por?",
+      isIncoming: true,
+      chatId: 2
+    },{
+      id: 15, 
+      text: "Nada mas?",
+      isIncoming: false,
+      chatId: 2
+    },{
+      id: 16, 
+      text: "AOK jeje?",
+      isIncoming: true,
+      chatId: 2
+    },{
+      id: 17, 
+      text: "Vas  air a la fiesta?",
+      isIncoming: false,
+      chatId: 2
+    },{
+      id: 18, 
+      text: "No se tu?",
+      isIncoming: true,
+      chatId: 2
+    },{
+      id: 19, 
+      text: "Pues si quiero pero no se porque ahi va a estra Maria y no me cae bien",
+      isIncoming: false,
+      chatId: 2
+    },{
+      id: 20, 
+      text: "Pues vamos a que hora paso por ti",
+      isIncoming: true,
+      chatId: 2
+    },{
+      id: 21, 
+      text: "Espera",
+      isIncoming: false,
+      chatId: 2
     }
+    
   ];
 
   constructor() { }
